@@ -17,5 +17,5 @@ You may override these by specifying them as the command, for example:
 
 `docker run -itd -p 11211:11211 -p 11211:11211/udp mbentley/memcached -vv -m 512 -p 11211 -c 2048`
 
-For all of the arguments, you can view the help:
+For a list of arguments, you can view the help:
 `docker run -it --rm mbentley/memcached -help`
