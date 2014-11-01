@@ -4,6 +4,7 @@ RUN (echo "deb http://http.debian.net/debian/ jessie main contrib non-free" > /e
 RUN apt-get update
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y memcached
+USER memcache
+EXPOSE 11211 11211/udp
 ENTRYPOINT ["memcached"]
-USER daemon
-EXPOSE 11211
+CMD ["-v","-m 256","-p 11211","-c 1024"]
